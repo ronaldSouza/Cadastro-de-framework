@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <ul>
+        {% for framework in frameworks %}
+            <li>
+            {{ framework.name }}/
+            {{ framework.language }}/
+            {{ framework.date_of_creation }}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
