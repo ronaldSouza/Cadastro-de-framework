@@ -33,4 +33,15 @@ def read(request):
     frameworks = Framework.objects.all()
 
     return render(request, 'listagem.html', {'frameworks': frameworks})
-    
+
+def consulta(request):
+
+    frameworks = Framework.objects.all()
+
+    return render(request, 'consulta.html', {'frameworks': frameworks})
+
+def search(request):
+
+    frameworks = Framework.objects.filter(name__icontains=request.GET.get('search', ''), )
+
+    return render(request, 'consulta.html', {'frameworks': frameworks})

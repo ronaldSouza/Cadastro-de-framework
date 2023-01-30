@@ -22,6 +22,8 @@ urlpatterns = [
     path('', index),
     path('crud/', crud, name='crud'),
     path('create/', create, name='create'),
+    path('consulta/', consulta, name='consulta'),
+     path('search/', search, name='search'),
     
     path('listagem/', read, name='list')
 ]
