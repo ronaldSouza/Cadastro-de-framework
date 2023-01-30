@@ -26,6 +26,8 @@
             {{ framework.name }}/
             {{ framework.language }}/
             {{ framework.date_of_creation }}
+            <a href="">deletar</a>/
+            <a href="{% url 'update' framework.pk %}">editar</a>
             </li>
         {% endfor %}
     </ul>
